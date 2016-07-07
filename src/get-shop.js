@@ -1,6 +1,5 @@
 #!/usr/bin/env node
-// import { config, Parser, download, logger } from 'edderkopp';
-import { config, Parser, download, logger, WebCache } from '../../edderkopp/dist';
+import { config, Parser, download, logger, WebCache } from 'edderkopp';
 import minimist from 'minimist';
 import winston from 'winston';
 
