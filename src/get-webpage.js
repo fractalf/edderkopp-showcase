@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { config, Parser, download, logger, WebCache } from 'edderkopp';
+import { log, config, Parser, download, WebCache } from 'edderkopp';
 import minimist from 'minimist';
 
 // Handle command line arguments
@@ -9,16 +9,17 @@ if (argv.h || argv.help || !argv._.length) {
     process.exit(1);
 }
 
-// Init log
-const log = logger.logConsole;
-log.activate('verbose');
+// Log
+//log.level = argv.l ? argv.l : 'verbose';
 
-// Get config based on url
+// Url
 const url = argv._[0];
+
+// Config
 // config.dir(__dirname + '/../config');
 const conf = config.get(url);
 
-// Use web cache
+// Web cache
 const wc = new WebCache();
 // let wc = new WebCache(__dirname + '/../web-cache.json');
 
@@ -42,5 +43,5 @@ function parse(html) {
     const parser = new Parser(html);
     const data = parser.getData(conf.pages.shops);
     log.info(data.shops.length);
-    // log.info(data.shops);
+    log.info(data.shops[0]);
 }
