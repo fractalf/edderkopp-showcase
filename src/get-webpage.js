@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 import { config, Parser, download, logger, WebCache } from 'edderkopp';
 import minimist from 'minimist';
-import winston from 'winston';
 
 // Handle command line arguments
 const argv = minimist(process.argv.slice(2));

@@ -1,7 +1,7 @@
 {
-  "name": "shops",
+  "name": "edderkopp-showcase",
   "version": "1.0.0",
-  "description": "Crawl webpage for shop data using https://github.com/fractalf/edderkopp",
+  "description": "Get data from webpages using https://github.com/fractalf/edderkopp",
   "scripts": {
     "install": "npm run build",
     "build": "babel --presets es2015 src -d bin",
@@ -9,8 +9,7 @@
   },
   "dependencies": {
     "edderkopp": "git+https://github.com/fractalf/edderkopp.git",
-    "minimist": "^1.2.0",
-    "winston": "^2.2.0"
+    "minimist": "^1.2.0"
   },
   "devDependencies": {
     "babel-cli": "^6.10.1",
